@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zxl.app.persistence.WebLinkMapper">
+ 
+
+  
+  <select id="getWeblinkById" parameterType="int" resultType="WebLink">
+  	select a.* from ${db_lietou}.web_link as a where a.link_id=#{link_id}
+  </select>
+</mapper>

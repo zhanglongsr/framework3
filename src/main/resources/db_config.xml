@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<properties>
+		<property name="db_lietou" value="lietou" />
+		<property name="driver" value="org.gjt.mm.mysql.Driver" />
+	    <property name="url" value="jdbc:mysql://10.10.10.11:21003/lietou?useUnicode=true&amp;characterEncoding=gbk" />
+	    <property name="username" value="lietou" />
+	    <property name="password" value="lietou" />
+	</properties>
+	<typeAliases>
+		<typeAlias alias="WebLink" type="com.zxl.app.entity.Web_link"/>
+	</typeAliases>
+	<environments default="lietou">
+		<environment id="lietou">
+			<transactionManager type="JDBC"/>
+			<dataSource type="POOLED">
+				<property name="driver" value="${driver}"/>
+				<property name="url" value="${url}"/>
+				<property name="username" value="${username}"/>
+				<property name="password" value="${password}"/>
+			</dataSource>
+		</environment>
+	</environments>
+	<mappers>
+		<mapper resource="com/zxl/app/persistence/WebLink.xml"/>
+	</mappers>
+</configuration>

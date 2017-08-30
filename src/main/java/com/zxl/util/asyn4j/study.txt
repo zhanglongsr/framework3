@@ -1,0 +1,3 @@
+Executor接口
+用于执行Runnable接口的任务。这个接口的意义在于把任务的提交与任务的执行的具体细节分离开来。
+ExecuteService
